@@ -1,0 +1,16 @@
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+        int[] result = new int[n*2];
+        //pointer being used for shifting where numbers are being set
+        //in result array
+        int pointer = 0;
+        for(int i = 0; i<n; i++){
+            result[pointer] = nums[i];
+            result[pointer+1] = nums[i+n];
+            //add 2 to pointer to account for 2 numbers being set per
+            //iteration of loop
+            pointer += 2;
+        }
+        return result;
+    }
+}
