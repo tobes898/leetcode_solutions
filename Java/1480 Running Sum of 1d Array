@@ -1,0 +1,16 @@
+class Solution {
+    public int[] runningSum(int[] nums) {
+        //since primitive array, using nums length as size
+        //of output array
+        int [] sums = new int[nums.length];
+        for(int i = 0; i<nums.length; i++){
+            if(i == 0){
+                sums[0] = nums[0];
+            }
+            else{
+                sums[i] = sums[i-1] + nums[i];
+            }
+        }
+        return sums;
+    }
+}
